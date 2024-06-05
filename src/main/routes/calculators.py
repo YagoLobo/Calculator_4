@@ -16,3 +16,4 @@ def calculator_4():
         return jsonify(response), 200
     except Exception as exception:
         error_response = handle_errors(exception)
+        return jsonify(error_response["body"]), error_response["status_code"]
